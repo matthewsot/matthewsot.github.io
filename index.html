@@ -1,8 +1,25 @@
 <html>
     <head>
         <title>Matthew Sotoudeh</title>
+        <link href="content/styles/index.css" rel="stylesheet"></link>
     </head>
     <body>
         <h1>Welcome!</h1>
+        <h3>Projects:</h3>
+        
+        <ul id="projects-list">
+        </ul>
+        
+        <script type="text/javascript" src="/content/scripts/projects.js"></script>
+        <script type="text/javascript">
+            var projectsList = document.getElementById("projects-list");
+            for(var p = 0; p < window.projects.length; p++) {
+                var project = window.projects[p];
+                var projectItem = document.createElement("li");
+                projectItem.textContent = project.name;
+                
+                projectsList.appendChild(projectItem);
+            }
+        </script>
     </body>
 </html>
