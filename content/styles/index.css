@@ -1,6 +1,12 @@
-#projects-list {
-    list-style-type:none;
+#large-name {
 }
-    #projects-list li {
-        
+
+#projects-list {
+    
+}
+    #projects-list div {
+        height:300px;
+        width:350px;
+        border-radius:5px;
+        background-color:#ebe9e9;
     }

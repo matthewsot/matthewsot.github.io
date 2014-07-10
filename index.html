@@ -1,21 +1,26 @@
 <html>
     <head>
         <title>Matthew Sotoudeh</title>
+        <link href="content/styles/shared.css" rel="stylesheet"></link>
         <link href="content/styles/index.css" rel="stylesheet"></link>
+        <link href="content/styles/flow-grid.css" rel="stylesheet"></link>        
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'> <!-- TODO: remove unused font weights -->
     </head>
     <body>
-        <h1>Welcome!</h1>
-        <h3>Projects:</h3>
+        <h1 id="large-name">Matthew Sotoudeh</h1>
+        <h3 id="me-description">Student &amp; hobbyist web developer in San Jose, CA</h3>
         
-        <ul id="projects-list">
-        </ul>
+        <div id="projects-list" class="flow-grid full-width">
+        </div>
         
         <script type="text/javascript" src="/content/scripts/projects.js"></script>
         <script type="text/javascript">
             var projectsList = document.getElementById("projects-list");
             for(var p = 0; p < window.projects.length; p++) {
                 var project = window.projects[p];
-                var projectItem = document.createElement("li");
+                
+                var projectItem = document.createElement("div");
                 projectItem.textContent = project.name;
                 
                 projectsList.appendChild(projectItem);
