@@ -49,7 +49,7 @@ a {
 }
 
 #projects-grid {
-    width: 90%;
+    width: 95%;
     margin: 25px auto;
 }
     .project {
@@ -66,3 +66,123 @@ a {
         .project:hover {
             background-color: #58b5e5;
         }
+
+@media all and (max-width:1210px) {
+    #projects-grid {
+        width: 100%;
+    }
+        .project {
+            margin: 10px;
+        }
+}
+
+@media all and (max-width:1090px) {
+    .project {
+        width: 275px;
+    }
+}
+
+@media all and (max-width:1010px) {
+    .project {
+        width: 250px;
+    }
+}
+
+@media all and (max-width:950px) {
+    .project {
+        margin: 5px;
+    }
+}
+
+@media all and (max-width:910px) {
+    #title-wrapper {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project {
+        height: 150px;
+        width: 225px;
+    }
+        .project h1 {
+            font-size: 25px;
+        }
+        .project p {
+            font-size: 15px;
+        }
+}
+
+@media all and (max-width:880px) {
+    #title-wrapper {
+        font-size: 15px;
+    }
+    #main-text {
+        font-size: 20px;
+    }
+        .emphasized-text {
+            font-size: 25px;
+        }
+}
+
+@media all and (max-width:830px) {
+    .project {
+        width: 200px;
+    }
+}
+
+@media all and (max-width:760px) {
+    .project {
+        width: 150px;
+        height: 100px;
+    }
+        .project h1 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .project p {
+            margin-top: 0;
+            font-size: 13px;
+        }
+}
+
+@media all and (max-width:705px) {
+    #main-text {
+        font-size: 15px;
+    }
+        .emphasized-text {
+            font-size: 20px;
+        }
+}
+
+@media all and (max-width:605px) {
+    #main-text {
+        text-align: left;
+        font-size: 20px;
+    }
+        .emphasized-text {
+            text-align: center;
+            font-size: 25px;
+        }
+    .project {
+        width: 40%;
+        margin-left: 0;
+        margin-right: 0;
+        height: 150px;
+    }
+}
+
+@media all and (max-width:360px) {
+    .project {
+        width: 80%;
+    }
+        .project h1 {
+            font-size: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 15px;
+        }
+}
