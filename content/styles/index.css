@@ -1,12 +1,61 @@
-#large-name {
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#projects-list {
-    
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
-    #projects-list div {
-        height:300px;
-        width:350px;
-        border-radius:5px;
-        background-color:#ebe9e9;
+a {
+    font-size: 25px;
+    color: #58b5e5;
+    text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline;
     }
+
+#title-wrapper {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+    #title-name,
+    #title-description {
+        margin: 0;
+    }
+
+#main-text {
+    margin-left: 45px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 750px;
+    float: left;
+}
+    .emphasized-text {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 35px 0 0 0;
+    }
+
+#related-list {
+    margin-right: 45px;
+    float: right;
+    border: 3px solid #000;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    display: none;
+    overflow-y: auto;
+}
+    .related-label {
+        font-size: 25px;
+    }
+    .related {
+        text-align: left;
+        padding-left: 15px;
+    }
+        .related p {
+            margin-top: 5px;
+        }

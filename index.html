@@ -1,30 +1,144 @@
 <html>
     <head>
         <title>Matthew Sotoudeh</title>
-        <link href="content/styles/shared.css" rel="stylesheet"></link>
-        <link href="content/styles/index.css" rel="stylesheet"></link>
-        <link href="content/styles/flow-grid.css" rel="stylesheet"></link>        
+        <link href="content/styles/index.css" rel="stylesheet" />  
         
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'> <!-- TODO: remove unused font weights -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css"> <!-- TODO: remove unused font weights -->
     </head>
-    <body>
-        <h1 id="large-name">Matthew Sotoudeh</h1>
-        <h3 id="me-description">Student &amp; hobbyist web developer in San Jose, CA</h3>
+<body>
+    <div id="title-wrapper">
+        <h1 id="title-name">Matthew Sotoudeh</h1>
+        <h3 id="title-description">student with a love for tech</h3>
+    </div>
+
+    <section id="main-text">
+        <h2 class="emphasized-text">Hi there!</h2>
+        I'm a student who loves to learn and play around with technology.
+        <br /><br/>
+
+        I've got experience with
+        <span id="tech-list" class="hover-list" data-related="project">
+            <span>C#</span>,
+            <span>Javascript</span>,
+            <span>ASP.NET MVC</span>,
+            <span>EF</span>, and
+            <span>PHP</span>
+        </span>.
+
+        <br/><br/>
+
+        I've created multiple projects, including
+        <span id="projects-list" class="hover-list" data-related="tagline+tech+experience">
+            <span>Classfinder</span>,
+            <span>LHSCampaign</span>, and
+            <span>SharpSwift</span>
+        </span>
+
+        <br/><br/>
         
-        <div id="projects-list" class="flow-grid full-width">
-        </div>
-        
-        <script type="text/javascript" src="/content/scripts/projects.js"></script>
-        <script type="text/javascript">
-            var projectsList = document.getElementById("projects-list");
-            for(var p = 0; p < window.projects.length; p++) {
-                var project = window.projects[p];
-                
-                var projectItem = document.createElement("div");
-                projectItem.textContent = project.name;
-                
-                projectsList.appendChild(projectItem);
+        On top of that, I've been recognized by groups including
+        <span id="recognitions-list" class="hover-list" data-related="recognition+project">
+            <span>Nokia</span> and the
+            <span>Future Business Leaders of America</span>
+        </span>.
+    </section>
+
+    <aside id="related-list">
+    </aside>
+
+    <script type="text/javascript" src="/content/scripts/projects.js"></script>
+    <script type="text/javascript">
+        //TODO: rewrite all of this using Angular :)
+
+        function getTaglineFromProject(projectName) {
+            for (var p = 0; p < projects.length; p++) {
+                if (projects[p].name != projectName) {
+                    continue;
+                }
+
+                var toReturn = '<h1 class="related-label">' + projectName + '</h1>';
+                toReturn += '<div class="related"><p>' + projects[p].tagline + '</p></div>';
+                return toReturn;
             }
-        </script>
-    </body>
+            return '';
+        }
+
+        function getRelatedTechByProject(projectName) {
+            for (var p = 0; p < projects.length; p++) {
+                if (projects[p].name != projectName) {
+                    continue;
+                }
+                
+                var toReturn = '<h1 class="related-label">Technology used</h1><div class="related">';
+                for (var t = 0; t < projects[p].tech.length; t++) {
+                    var tech = projects[p].tech[t];
+
+                    toReturn += '<p>' + tech + '</p>';
+                }
+                return toReturn + '</div>';
+            }
+            return '';
+        }
+
+        function getRelatedProjectsByTech(tech) {
+            var relatedProjects = projects.filter(function(project) {
+                return project.tech.indexOf(tech) != -1;
+            });
+
+            var toReturn = '<h1 class="related-label">Projects that use ' + tech + '</h1>';
+
+            for (var p = 0; p < relatedProjects.length; p++) {
+                var project = relatedProjects[p];
+                toReturn += '<div class="related">';
+
+                var infoLink = document.createElement('a');
+                infoLink.href = 'project.html?name=' + encodeURIComponent(project.name);
+                infoLink.textContent = project.name;
+
+                toReturn += infoLink.outerHTML + '<br/>';
+
+                var content = document.createElement('p');
+                content.textContent = project.tagline;
+
+                toReturn += content.outerHTML + '</div>';
+            }
+
+            return toReturn;
+        }
+
+        $(".hover-list").children("span").hover(function () {
+            //OK, so maybe this is a bit overkill, but it's fun :D
+            var targets = $(this).parent().attr("data-related").split('+');
+            var preRelated = "";
+
+            for (var t = 0; t < targets.length; t++) {
+                switch(targets[t]) {
+                    case 'project':
+                        preRelated += getRelatedProjectsByTech($(this).text());
+                        break;
+                    case 'tagline':
+                        preRelated += getTaglineFromProject($(this).text());
+                        break;
+                    case 'tech':
+                        preRelated += getRelatedTechByProject($(this).text());
+                }
+            }
+
+            $("#related-list").html(preRelated);
+            $("#related-list").show();
+        });
+
+        //var projectsList = document.getElementById("projects-list");
+        //for (var p = 0; p < window.projects.length; p++) {
+        //    var project = window.projects[p];
+
+        //    var projectItem = document.createElement("div");
+        //    projectItem.textContent = project.name;
+
+        //    projectsList.appendChild(projectItem);
+        //}
+    </script>
+</body>
+
 </html>

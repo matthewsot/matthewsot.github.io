@@ -3,12 +3,13 @@
 window.projects = [
     {
         "name": "Classfinder",
-        "tagline": "A class-sharing website for students in Miller Middle and Lynbrook High School",
+        "tagline": "A class-sharing website used by hundreds of students in the FUHSD school district.",
         "link": "http://classfinder.me/",
         "source": "https://github.com/matthewsot/Classfinder",
         "tech": [
             "HTML",
             "CSS",
+            "C#",
             "Javascript",
             "ASP.NET MVC",
             "Entity Framework"
@@ -27,6 +28,7 @@ window.projects = [
         "tech": [
             "HTML",
             "CSS",
+            "C#",
             "Javascript",
             "Typescript",
             "ASP.NET MVC"
@@ -41,8 +43,17 @@ window.projects = [
         ]
     },
     {
-        "name": "LHS|Campaign",
+        "name": "LHSCampaign",
         "tagline": "A website that helps teach voters about candidates while they create profile pictures",
+        "tech": [
+            "HTML",
+            "CSS",
+            "C#",
+            "Javascript",
+            "ASP.NET MVC",
+            "Entity Framework",
+            "Fabric.js"
+        ],
         "link": "http://lhscampaign.com",
         "source": "https://github.com/matthewsot/lhscampaign"
     },
