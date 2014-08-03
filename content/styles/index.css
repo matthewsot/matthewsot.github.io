@@ -49,13 +49,13 @@ a {
 }
 
 #projects-grid {
-    width: 95%;
+    width: 100%;
     margin: 25px auto;
 }
     .project {
-        width: 300px;
+        width: 25%;
         height: 200px;
-        margin: 20px;
+        margin: 20px 0 20px 0;
         padding: 15px;
         background-color: #F5F5F5;
         border-radius: 3px;
@@ -67,33 +67,6 @@ a {
             background-color: #58b5e5;
         }
 
-@media all and (max-width:1210px) {
-    #projects-grid {
-        width: 100%;
-    }
-        .project {
-            margin: 10px;
-        }
-}
-
-@media all and (max-width:1090px) {
-    .project {
-        width: 275px;
-    }
-}
-
-@media all and (max-width:1010px) {
-    .project {
-        width: 250px;
-    }
-}
-
-@media all and (max-width:950px) {
-    .project {
-        margin: 5px;
-    }
-}
-
 @media all and (max-width:910px) {
     #title-wrapper {
         margin-left: 0;
@@ -103,7 +76,7 @@ a {
 
     .project {
         height: 150px;
-        width: 225px;
+        margin: 10px 0 10px 0;
     }
         .project h1 {
             font-size: 25px;
@@ -125,15 +98,8 @@ a {
         }
 }
 
-@media all and (max-width:830px) {
-    .project {
-        width: 200px;
-    }
-}
-
 @media all and (max-width:760px) {
     .project {
-        width: 150px;
         height: 100px;
     }
         .project h1 {
@@ -156,6 +122,7 @@ a {
         }
 }
 
+/* switch to a 2-column layout */
 @media all and (max-width:605px) {
     #main-text {
         text-align: left;
@@ -173,6 +140,7 @@ a {
     }
 }
 
+/* switch toa 1-column layout */
 @media all and (max-width:360px) {
     .project {
         width: 80%;
