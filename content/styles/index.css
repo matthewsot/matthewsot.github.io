@@ -53,7 +53,6 @@ a:hover {
 }
 .image-text .image {
   float: left;
-  width: 150px;
   margin-left: 30px;
 }
 .image-text .text {
@@ -84,6 +83,7 @@ a:hover {
   background-color: #373737;
 }
 .project .image {
+  height: 150px;
   margin-top: 75px;
 }
 .project .tech-used {
@@ -124,7 +124,7 @@ a:hover {
 }
 .project .peekshot {
   float: left;
-  height: 250px;
+  height: 225px;
   margin-right: 25px;
   box-shadow: -5px -5px 20px 0 #000000;
   cursor: pointer;
@@ -134,6 +134,9 @@ a:hover {
 }
 .project .peekshot:hover {
   margin-top: 0;
+}
+.project .peekshot:last-child {
+  margin-right: 0;
 }
 .see-more {
   height: 75px;
@@ -152,6 +155,7 @@ a:hover {
   height: 225px;
 }
 .recognition .image {
+  height: 150px;
   margin-top: 37.5px;
 }
 #FBLA {
@@ -162,8 +166,107 @@ a:hover {
 }
 #nokia .image {
   height: 100px;
-  width: 100px;
   margin-top: 62.5px;
   margin-left: 55px;
+}
+@media all and (max-width: 1150px) {
+  .project .peekshot {
+    height: 200px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .text .content {
+    font-size: 20px;
+  }
+  .project .peekshot {
+    height: 150px;
+  }
+}
+@media all and (max-width: 875px) {
+  .project .image {
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .recognition .image,
+  #nokia .image {
+    height: 100px;
+    margin-top: 62.5px;
+    margin-left: 30px;
+  }
+  .image-text .text,
+  .project .screenshots {
+    left: 150px;
+  }
+}
+@media all and (max-width: 800px) {
+  #hero-image {
+    background-position-y: 0;
+  }
+  #hero-text {
+    position: static;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .image-text,
+  .project,
+  .recognition {
+    text-align: center;
+    height: auto;
+  }
+  .image-text .image {
+    float: none;
+    margin: 10px 0 0 0;
+  }
+  .image-text .links {
+    position: static;
+    float: none;
+    margin: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .links a {
+    float: none;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+  }
+  .image-text .text {
+    position: static;
+  }
+  .text .content {
+    width: 100%;
+    text-align: center;
+  }
+  .project {
+    padding-bottom: 100px;
+  }
+  .project .screenshots {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  .project .peekshot {
+    float: none;
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: none;
+  }
+  .project .peekshot:hover {
+    margin-top: 50px;
+  }
+  .project .screenshots .peekshot:last-child {
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .recognition {
+    padding-bottom: 100px;
+  }
+  #nokia .image {
+    margin-left: -15px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

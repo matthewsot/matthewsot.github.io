@@ -52,13 +52,17 @@ a {
     background-color:#fff;
 }
 
+.centered-image(@row-height, @img-height) {
+    height:@img-height;
+    margin-top:(@row-height - @img-height) / 2
+}
+
 //A row with an image, header, and text
 .image-text {
     color: #fff;
 }
     .image-text .image {
         float:left;
-        width: 150px;
         margin-left: 30px;
     }
     .image-text .text {
@@ -92,7 +96,7 @@ a {
     }
     
     .project .image {
-        margin-top:(@proj-row-height - 150px) / 2;
+        .centered-image(@proj-row-height, 150px);
     }
 
     .project .tech-used {
@@ -137,7 +141,7 @@ a {
     }
         .project .peekshot {
             float:left;
-            height:250px;
+            height:225px;
             margin-right:25px;
             box-shadow: -5px -5px 20px 0 #000;
             cursor:pointer;
@@ -147,6 +151,9 @@ a {
         }
             .project .peekshot:hover {
                 margin-top:0;
+            }
+            .project .peekshot:last-child {
+                margin-right:0;
             }
 
 .see-more {
@@ -163,11 +170,13 @@ a {
         color:#fff;
     }
 
+@recognition-row-height: 225px;
 .recognition {
-    height:225px;
+    height:@recognition-row-height;
 }
     .recognition .image {
-        margin-top:37.5px;
+        .centered-image(@recognition-row-height, 150px);
+        //margin-top:37.5px;
     }
     #FBLA {
         background-color:#373737;
@@ -176,8 +185,114 @@ a {
         background-color:#44A0C8;
     }
         #nokia .image {
-            height:100px;
-            width:100px;
-            margin-top: (225px - 100px) / 2;
+            .centered-image(@recognition-row-height, 100px);
             margin-left:55px;
         }
+
+@media all and (max-width:1150px) {
+    .project .peekshot {
+        height:200px;
+    }
+}
+
+@media all and (max-width:1050px) {
+    .text .content {
+        font-size:20px;
+    }
+
+    .project .peekshot {
+        height:150px;
+    }
+}
+
+@media all and (max-width:875px) {
+    .project .image {
+        .centered-image(@proj-row-height, 100px);
+        margin-left:30px;
+    }
+    
+    .recognition .image,
+    #nokia .image {
+        .centered-image(@recognition-row-height, 100px);
+        margin-left:30px;
+    }
+
+    .image-text .text,
+    .project .screenshots {
+        left:150px;
+    }
+}
+
+//mobile layout
+@media all and (max-width:800px) {
+    #hero-image {
+        background-position-y:0;
+    }
+        #hero-text {
+            position:static;
+            margin-top:50px;
+            width:100%;
+        }
+    .image-text,
+    .project,
+    .recognition {
+        text-align:center;
+        height:auto;
+    }
+        .image-text .image {
+            float:none;
+            margin:10px 0 0 0;
+        }
+        .image-text .links {
+            position:static;
+            float:none;
+            margin:0;
+            height:50px;
+            width:100%;
+            text-align:center;
+        }
+            .links a {
+                float:none;
+                display:inline-block;
+                margin:0 10px 0 10px;
+            }
+        .image-text .text {
+            position:static;
+        }
+        .text .content {
+            width:100%;
+            text-align:center;
+        }
+
+    .project {
+        padding-bottom:100px;
+    }
+        .project .screenshots {
+            position:static;
+            top:auto;
+            left:auto;
+        }
+            .project .peekshot {
+                float:none;
+                display:block;
+                width:60%;
+                height:auto;
+                margin:0 auto;
+                margin-top:50px;
+                transition:none;
+            }
+                .project .peekshot:hover {
+                    margin-top:50px;
+                }
+            .project .screenshots .peekshot:last-child {
+                margin: 0 auto;
+                margin-top:50px;
+            }
+
+    .recognition {
+        padding-bottom:100px;
+    }
+        #nokia .image {
+            margin-left:-15px;
+        }
+}
