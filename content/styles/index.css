@@ -1,156 +1,146 @@
-body, html {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+﻿body,
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 a {
-    font-size: 25px;
-    color: #58b5e5;
-    text-decoration: none;
+  color: #44A0C8;
+  text-decoration: none;
 }
-    a:hover {
-        text-decoration: underline;
-    }
-
-#title-wrapper {
-    text-align: left;
-    margin-left: 30px;
-    margin-top: 30px;
+a:hover {
+  text-decoration: underline;
 }
-    #title-name,
-    #title-description {
-        margin: 0;
-    }
-
-#main-text {
-    font-size: 25px;
-    display: inline-block;
-    font-weight: 400;
-    text-align: left;
-    width: auto;
+.row {
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
-    .emphasized-text {
-        font-size: 35px;
-        font-weight: 600;
-        margin: 35px 0 0 0;
-    }
-
-.flex-grid {
-    display: flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#hero-image {
+  height: 600px;
+  background-size: cover;
+  background-image: url(../images/GreenMountain.jpg);
 }
-
-#projects-grid {
-    width: 100%;
-    margin: 25px auto;
+#hero-text {
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  text-align: center;
 }
-    .project {
-        width: 25%;
-        height: 200px;
-        margin: 20px 0 20px 0;
-        padding: 15px;
-        background-color: #F5F5F5;
-        border-radius: 3px;
-        transition: background-color 0.2s;
-        cursor: pointer;
-        border: 2px solid #58b5e5;
-    }
-        .project:hover {
-            background-color: #58b5e5;
-        }
-
-@media all and (max-width:910px) {
-    #title-wrapper {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .project {
-        height: 150px;
-        margin: 10px 0 10px 0;
-    }
-        .project h1 {
-            font-size: 25px;
-        }
-        .project p {
-            font-size: 15px;
-        }
+#hero-text h3 {
+  color: #999;
+  margin: 0;
+  font-weight: 400;
+  font-size: 30px;
 }
-
-@media all and (max-width:880px) {
-    #title-wrapper {
-        font-size: 15px;
-    }
-    #main-text {
-        font-size: 20px;
-    }
-        .emphasized-text {
-            font-size: 25px;
-        }
+#hero-text h1 {
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 400;
 }
-
-@media all and (max-width:760px) {
-    .project {
-        height: 100px;
-    }
-        .project h1 {
-            font-size: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .project p {
-            margin-top: 0;
-            font-size: 13px;
-        }
+.header {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  background-color: #fff;
 }
-
-@media all and (max-width:705px) {
-    #main-text {
-        font-size: 15px;
-    }
-        .emphasized-text {
-            font-size: 20px;
-        }
+.project {
+  height: 300px;
+  color: #fff;
 }
-
-/* switch to a 2-column layout */
-@media all and (max-width:605px) {
-    #main-text {
-        text-align: left;
-        font-size: 20px;
-    }
-        .emphasized-text {
-            text-align: center;
-            font-size: 25px;
-        }
-    .project {
-        width: 40%;
-        margin-left: 0;
-        margin-right: 0;
-        height: 150px;
-    }
+#cf-row {
+  background-color: #1CCFAF;
 }
-
-/* switch toa 1-column layout */
-@media all and (max-width:360px) {
-    .project {
-        width: 80%;
-    }
-        .project h1 {
-            font-size: 25px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .project p {
-            font-size: 15px;
-        }
+#lhscamp-row {
+  background-color: #44A0C8;
 }
+#he-row {
+  background-color: #373737;
+}
+.project .logo {
+  float: left;
+  width: 150px;
+  margin-left: 30px;
+  margin-top: 75px;
+}
+.project .content {
+  top: 20px;
+  left: 225px;
+  position: absolute;
+}
+.project .name {
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+}
+.project .description {
+  font-size: 25px;
+  margin: 0;
+  width: 90%;
+}
+.project .tech-used {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.project .links {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.links a {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-right: 25px;
+  text-decoration: none;
+}
+.links .github-link {
+  background-image: url(../images/links/Github.Light.png);
+}
+.links .github-link:hover {
+  background-image: url(../images/links/Github.Dark.png);
+}
+.links .web-link {
+  background-image: url(../images/links/Web.Light.png);
+}
+.links .web-link:hover {
+  background-image: url(../images/links/Web.Dark.png);
+}
+.project .screenshots {
+  position: absolute;
+  top: 200px;
+  left: 225px;
+}
+.project .peekshot {
+  float: left;
+  height: 250px;
+  margin-right: 25px;
+  box-shadow: -5px -5px 20px 0 #000000;
+  cursor: pointer;
+  transition: margin-top linear 0.1s;
+  z-index: 1;
+  margin-top: 25px;
+}
+.project .peekshot:hover {
+  margin-top: 0;
+}
+.see-more {
+  height: 75px;
+  line-height: 75px;
+  text-align: right;
+  z-index: 3;
+  position: relative;
+  background-color: #FF3C58;
+}
+.see-more a {
+  margin-right: 50px;
+  font-size: 25px;
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -4,35 +4,106 @@
         <link href="content/styles/index.css" rel="stylesheet" />  
         
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+        <script type="text/javascript" src="content/scripts/wedge.js"></script>
         <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css"> <!-- TODO: remove unused font weights -->
     </head>
 <body>
-    <div id="title-wrapper">
-        <h1 id="title-name">Matthew Sotoudeh</h1>
-        <!--<h3 id="title-description">student with a love for tech</h3>-->
+    <div id="hero-image" class="row">
+        <div id="hero-text">
+            <h3>Hi there! I'm</h3>
+            <h1>Matthew Sotoudeh</h1>
+        </div>
     </div>
 
-    <section id="main-text">
-        <h2 class="emphasized-text">Hi there!</h2>
-        I'm a student who loves to learn, make, and play around with technology.
-        <br/>
-        Check out my projects below, or contact me at matthewsot@outlook.com
-    </section>
-    
-    <div class="flex-grid" id="projects-grid">
+    <div class="header row">
+        Projects:
     </div>
 
-    <script type="text/javascript" src="/content/scripts/projects.js"></script>
+    <div class="project row" id="cf-row">
+        <img class="logo" src="/content/images/logos/classfinder.png" />
+
+        <div class="content">
+            <h1 class="name">Classfinder</h1>
+            <p class="description">
+                Classfinder is a class-sharing website used by hundreds of students each year in the FUHSD school district.
+            </p>
+            <p class="tech-used">
+                Tech Used: ASP.NET MVC 5, EF 6.1, HTML 5, CSS 3, Javascript
+            </p>
+        </div>
+        
+        <div class="links">
+            <a href="https://github.com/matthewsot/classfinder" class="github-link"></a>
+            <a href="https://classfinder.me/" class="web-link"></a>
+        </div>
+
+        <div class="screenshots">
+            <img class="peekshot" src="/content/images/screenshots/classfinder/index.png" title="Classfinder's Landing Page" />
+            <img class="peekshot" src="/content/images/screenshots/classfinder/indexbottom.png" title="Info on Classfinder" />
+            <img class="peekshot" src="/content/images/screenshots/classfinder/home.png" title="Classfinder's Schedule page" />
+        </div>
+    </div>
+    <div class="project row" id="lhscamp-row">
+        <img class="logo" src="/content/images/logos/lhscamp.png" />
+
+        <div class="content">
+            <h1 class="name">LHSCampaign</h1>
+            <p class="description">
+                LHS Campaign helps candidates in our student election inform and campaign to voters online.
+            </p>
+            <p class="tech-used">
+                Tech Used: Fabric.js, HTML5 Canvas, ASP.NET MVC 5
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/matthewsot/lhscampaign" class="github-link"></a>
+            <a href="https://lhscampaign.com/" class="web-link"></a>
+        </div>
+
+        <div class="screenshots">
+            <img class="peekshot" src="/content/images/screenshots/lhscamp/index.png" title="LHSCampaign Landing Page" />
+            <img class="peekshot" src="/content/images/screenshots/lhscamp/indexbottom.png" title="LHSCampaign Info" />
+            <img class="peekshot" src="/content/images/screenshots/lhscamp/home.png" title="LHSCampaign Candidates Page" />
+        </div>
+    </div>
+
+    <div class="project row" id="he-row">
+        <img class="logo" src="/content/images/logos/halcyon.png" />
+
+        <div class="content">
+            <h1 class="name">Halcyon Echoes</h1>
+            <p class="description">
+                Our fully-functional website for a fictional band won first place in the 2014 FBLA Nationals competition.
+            </p>
+            <p class="tech-used">
+                Tech Used: jPlayer, HTML5 History APIs, AJAX page loading
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="https://halcyonechoes.com/" class="web-link"></a>
+        </div>
+
+        <div class="screenshots">
+            <img class="peekshot" src="/content/images/screenshots/halcyon/home.jpg" title="Classfinder's Landing Page" />
+            <img class="peekshot" src="/content/images/screenshots/halcyon/events.jpg" title="Info on Classfinder" />
+            <img class="peekshot" src="/content/images/screenshots/halcyon/storeitem.jpg" title="Classfinder's Schedule page" />
+        </div>
+    </div>
+
+    <div class="see-more row">
+        <a href="projects.html">See More Projects ></a>
+    </div>
+
+    <div class="header row">
+        Recognition
+    </div>
+
     <script type="text/javascript">
-        for (var p = 0; p < projects.length; p++) {
-            var project = projects[p];
-
-            var newBox = '<div class="project"><h1 class="project-label">' + project.name + '</h1>';
-            newBox += '<p class="project-tagline">' + project.tagline + '</p></div>';
-            $("#projects-grid").append(newBox);
-        }
+        $(".peekshot").click(function () {
+            wedge.show($(this).attr("src"), 'img', $(this).attr("title"));
+        });
     </script>
 </body>
-
 </html>
