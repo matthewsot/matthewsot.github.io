@@ -1,4 +1,4 @@
-﻿body,
+body,
 html {
   margin: 0;
   width: 100%;
@@ -41,8 +41,8 @@ a:hover {
   font-weight: 400;
 }
 .header {
-  height: 100px;
-  line-height: 100px;
+  height: 200px;
+  line-height: 200px;
   text-align: center;
   font-weight: 400;
   font-size: 35px;
@@ -269,4 +269,3 @@ a:hover {
     margin-left: -15px;
   }
 }
-/*# sourceMappingURL=index.css.map */
