@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "shared.css",
+  "sources": [
+    "shared.less"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAM;EACF,SAAA;EACA,WAAA;EACA,YAAA;EACA,aAAa,uBAAb;EACA,gBAAA;;AAGJ;AAAI;EACA,gBAAA;EACA,SAAA;;AAEJ;EACI,eAAA;;AAGJ;EACI,cAAA;EACA,qBAAA;;AAEA,CAAC;EACG,0BAAA"
+}

@@ -1,9 +1,18 @@
-body,
+﻿body,
 html {
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+h1,
+h3 {
+  font-weight: 400;
+  margin: 0;
+}
+h1 {
+  font-size: 40px;
 }
 a {
   color: #44A0C8;
@@ -28,44 +37,37 @@ a:hover {
   left: 35px;
   top: 30px;
   text-align: center;
-}
-#hero-text h3 {
   color: #999;
-  margin: 0;
-  font-weight: 400;
-  font-size: 30px;
 }
 #hero-text h1 {
-  margin: 0;
-  font-size: 40px;
-  font-weight: 400;
+  color: #000;
+}
+#hero-text h3 {
+  font-size: 30px;
 }
 .header {
   height: 200px;
   line-height: 200px;
   text-align: center;
-  font-weight: 400;
   font-size: 35px;
   background-color: #fff;
 }
-.image-text {
+.icon-with-text {
   color: #fff;
 }
-.image-text .image {
-  float: left;
-  margin-left: 30px;
+.icon-with-text .icon {
+  width: 150px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.image-text .text {
+.icon-with-text .text {
   top: 20px;
   left: 225px;
   position: absolute;
 }
-.text .heading {
-  margin: 0;
-  font-weight: 400;
-  font-size: 40px;
-}
-.text .content {
+.icon-with-text .text p {
   font-size: 25px;
   margin: 0;
   width: 90%;
@@ -82,28 +84,21 @@ a:hover {
 #he-row {
   background-color: #373737;
 }
-.project .image {
-  height: 150px;
-  margin-top: 75px;
-}
-.project .tech-used {
-  font-size: 25px;
-  margin-bottom: 0;
-  margin-top: 15px;
+.project .text {
+  z-index: 1;
 }
 .project .links {
   position: absolute;
   top: 20px;
   right: 40px;
+  z-index: 10;
 }
 .links a {
-  display: block;
-  float: left;
+  display: inline-block;
   width: 50px;
   height: 50px;
   background-size: cover;
   margin-right: 25px;
-  text-decoration: none;
 }
 .links .github-link {
   background-image: url(../images/links/Github.Light.png);
@@ -117,33 +112,30 @@ a:hover {
 .links .web-link:hover {
   background-image: url(../images/links/Web.Dark.png);
 }
-.project .screenshots {
+.peekshots {
   position: absolute;
-  top: 200px;
+  bottom: -150px;
   left: 225px;
 }
-.project .peekshot {
+.peekshots .peekshot {
   float: left;
   height: 225px;
   margin-right: 25px;
   box-shadow: -5px -5px 20px 0 #000000;
   cursor: pointer;
   transition: margin-top linear 0.1s;
-  z-index: 1;
   margin-top: 25px;
 }
-.project .peekshot:hover {
+.peekshots .peekshot:hover {
   margin-top: 0;
 }
-.project .peekshot:last-child {
+.peekshots .peekshot:last-child {
   margin-right: 0;
 }
 .see-more {
   height: 75px;
   line-height: 75px;
   text-align: right;
-  z-index: 3;
-  position: relative;
   background-color: #FF3C58;
 }
 .see-more a {
@@ -154,48 +146,39 @@ a:hover {
 .recognition {
   height: 225px;
 }
-.recognition .image {
-  height: 150px;
-  margin-top: 37.5px;
-}
 #FBLA {
   background-color: #373737;
 }
 #nokia {
   background-color: #44A0C8;
 }
-#nokia .image {
-  height: 100px;
-  margin-top: 62.5px;
-  margin-left: 55px;
-}
 @media all and (max-width: 1150px) {
-  .project .peekshot {
+  .peekshots {
+    bottom: -125px;
+  }
+  .peekshots .peekshot {
     height: 200px;
   }
 }
 @media all and (max-width: 1050px) {
-  .text .content {
+  .icon-with-text .text p {
     font-size: 20px;
+    margin-top: 15px;
   }
-  .project .peekshot {
+  .peekshots {
+    bottom: -90px;
+  }
+  .peekshots .peekshot {
     height: 150px;
   }
 }
 @media all and (max-width: 875px) {
-  .project .image {
-    height: 100px;
-    margin-top: 100px;
-    margin-left: 30px;
+  .icon-with-text .icon {
+    width: 75px;
+    margin-left: 0;
   }
-  .recognition .image,
-  #nokia .image {
-    height: 100px;
-    margin-top: 62.5px;
-    margin-left: 30px;
-  }
-  .image-text .text,
-  .project .screenshots {
+  .icon-with-text .text,
+  .peekshots {
     left: 150px;
   }
 }
@@ -205,67 +188,62 @@ a:hover {
   }
   #hero-text {
     position: static;
-    margin-top: 50px;
+    padding-top: 50px;
     width: 100%;
   }
-  .image-text,
-  .project,
-  .recognition {
+  .header {
+    height: 100px;
+    line-height: 100px;
+  }
+  .icon-with-text {
     text-align: center;
     height: auto;
   }
-  .image-text .image {
+  .icon-with-text .icon {
     float: none;
-    margin: 10px 0 0 0;
-  }
-  .image-text .links {
     position: static;
-    float: none;
-    margin: 0;
-    height: 50px;
-    width: 100%;
-    text-align: center;
+    margin: 10px 0 20px 0;
+    transform: none;
+    width: 100px;
   }
-  .links a {
-    float: none;
-    display: inline-block;
-    margin: 0 10px 0 10px;
-  }
-  .image-text .text {
+  .icon-with-text .text {
     position: static;
+    width: 95%;
+    margin: 0 auto;
   }
-  .text .content {
+  .icon-with-text .text p {
     width: 100%;
-    text-align: center;
+    font-size: 25px;
   }
   .project {
-    padding-bottom: 100px;
+    padding-bottom: 75px;
   }
-  .project .screenshots {
+  .project .links {
     position: static;
-    top: auto;
-    left: auto;
   }
-  .project .peekshot {
+  .links a {
+    margin: 0 10px 0 10px;
+  }
+  .project .peekshots {
+    position: static;
+  }
+  .peekshots .peekshot {
     float: none;
     display: block;
-    width: 60%;
+    width: 40%;
     height: auto;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
     transition: none;
   }
-  .project .peekshot:hover {
+  .peekshots .peekshot:hover {
     margin-top: 50px;
   }
-  .project .screenshots .peekshot:last-child {
-    margin: 0 auto;
-    margin-top: 50px;
+  .peekshots .peekshot:last-child {
+    margin: 50px auto 0 auto;
   }
   .recognition {
+    padding-top: 20px;
     padding-bottom: 100px;
   }
-  #nokia .image {
-    margin-left: -15px;
-  }
 }
+/*# sourceMappingURL=index.css.map */
