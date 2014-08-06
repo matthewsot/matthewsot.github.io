@@ -10,7 +10,7 @@
     height: 300px;
     background-size:cover;
     background-image: url(../images/GreenMountain.jpg);
-    background-position-y:-200px;
+    background-position:0 -200px;
 }
     #hero-text {
         position: absolute;
@@ -47,7 +47,7 @@
 
 .more-info {
     margin-top: 100px;
-    border-top: 2px solid #000;
+    border-top: 1px solid #999;
     padding-top: 50px;
     margin-bottom: 100px;
 }
