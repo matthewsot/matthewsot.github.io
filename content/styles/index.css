@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0;
     position:relative;
+    background-color:#fff;
 }
 
 #hero-image {
@@ -29,8 +30,41 @@
     line-height:200px;
     text-align:center;
     font-size:35px;
-    background-color:#fff;
 }
+
+.header-with-subheader {
+    height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+    .header-with-subheader h1 {
+        font-size: 35px;
+    }
+    .header-with-subheader h3 {
+        color: #999;
+    }
+
+.bubbles {
+    text-align: center; /*centers the middle bubble*/
+}
+    .bubbles .bubble {
+        width: 25%;
+        text-align: center;
+    }
+        .bubbles .bubble p {
+            font-size: 20px;
+        }
+        .bubbles .bubble:first-child {
+            float: left;
+            margin-left: 50px;
+        }
+        .bubbles .bubble:nth-child(2) {
+            display: inline-block;
+        }
+        .bubbles .bubble:last-child {
+            float: right;
+            margin-right: 50px;
+        }
 
 /*A row with an image, header, and text*/
 .icon-with-text {
@@ -156,6 +190,10 @@
         .peekshots .peekshot {
             height:150px;
         }
+
+    .bubbles .bubble p {
+        font-size: 18px;
+    }
 }
 
 @media all and (max-width:875px) {
@@ -238,5 +276,15 @@
     .recognition {
         padding-top:20px;
         padding-bottom:100px;
+    }
+
+    .header-with-subheader {
+        height: 100px;
+    }
+
+    .bubbles .bubble:nth-child(n) {
+        width: 50%;
+        float: none;
+        margin: 25px auto 25px auto;
     }
 }
