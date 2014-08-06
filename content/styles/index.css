@@ -3,6 +3,7 @@
     margin: 0;
     position:relative;
     background-color:#fff;
+    text-align: center;
 }
 
 #hero-image {
@@ -44,6 +45,18 @@
         color: #999;
     }
 
+.more-info {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+    .more-info h1 {
+        font-size: 35px; /* To match the .header font size */
+        margin-bottom: 30px;
+    }
+    .more-info h2 {
+        margin-bottom: 15px;
+    }
+
 .bubbles {
     text-align: center; /*centers the middle bubble*/
 }
@@ -69,6 +82,7 @@
 /*A row with an image, header, and text*/
 .icon-with-text {
     color: #fff;
+    text-align: left;
 }
     .icon-with-text .icon {
         width:150px;
