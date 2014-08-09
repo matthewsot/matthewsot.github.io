@@ -184,6 +184,9 @@
 }
     #FBLA { background-color:#373737; }
     #nokia { background-color:#44A0C8; }
+    .recognition a {
+        color: inherit;
+    }
 
 @media all and (max-width:1150px) {
     .peekshots {
@@ -227,7 +230,7 @@
 /*mobile layout*/
 @media all and (max-width:800px) {
     #hero-image {
-        background-position-y:0; /*otherwise the background starts to repeat*/
+        background-position:0 0; /*otherwise the background starts to repeat*/
     }
         #hero-text {
             position:static;
