@@ -9,6 +9,7 @@
 #hero-image {
     height: 300px;
     background-size:cover;
+    /* image from http://unsplash.com/ */
     background-image: url(../images/GreenMountain.jpg);
     background-position:0 -200px;
 }
