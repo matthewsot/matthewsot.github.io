@@ -53,7 +53,7 @@
     margin-bottom: 100px;
 }
     .more-info h1 {
-        font-size: 35px; /* To match the .header font size */
+        font-size: 35px; /* to match the .header font size */
         margin-bottom: 30px;
     }
     .more-info h2 {
@@ -61,7 +61,7 @@
     }
 
 .bubbles {
-    text-align: center; /*centers the middle bubble*/
+    text-align: center; /* centers the middle bubble */
 }
     .bubbles .bubble {
         width: 25%;
@@ -75,14 +75,14 @@
             margin-left: 50px;
         }
         .bubbles .bubble:nth-child(2) {
-            display: inline-block;
+            display: inline-block; /* this is basically a replacement for float:center, it'll cause it to position based on the text-align:center in .bubbles */
         }
         .bubbles .bubble:last-child {
             float: right;
             margin-right: 50px;
         }
 
-/*A row with an image, header, and text*/
+/* a row with an image, header, and text */
 .icon-with-text {
     color: #fff;
     text-align: left;
@@ -92,7 +92,7 @@
         position:absolute;
         left: 30px;
         top:50%;
-        transform:translateY(-50%); /*TODO: make a fallback for older browsers*/
+        transform:translateY(-50%); /* TODO: make a fallback for older browsers */
     }
     .icon-with-text .text {
         top:20px;
@@ -105,7 +105,7 @@
             width:90%;
         }
 
-/*a large icon/text row with space for links and "peekshots"*/
+/* a large icon/text row with space for links and "peekshots" */
 .project {
     height: 300px;
 }
@@ -121,7 +121,7 @@
         position:absolute;
         top:20px;
         right:40px;
-        z-index:10; /*We want this to be higher up than .text, which otherwise sits on top of it*/
+        z-index:10; /* we want this to be higher up than .text, which otherwise sits on top of it */
     }
         .links a {
             display:inline-block;
@@ -130,14 +130,14 @@
             background-size:cover;
             margin-right:25px;
         }
-            /*https://github.com/logos*/
+            /* https://github.com/logos */
             .links .github-link {
                 background-image: url(../images/links/Github.Light.png);
             }
                 .links .github-link:hover {
                     background-image: url(../images/links/Github.Dark.png);
                 }
-            /*Globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128*/
+            /* globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128 */
             .links .web-link {
                 background-image: url(../images/links/Web.Light.png);
             }
@@ -145,7 +145,7 @@
                     background-image: url(../images/links/Web.Dark.png);
                 }
 
-    /*Peekshots are the screenshots at the bottom of the rows that "peek" when you hover on them*/
+    /* peekshots are the screenshots at the bottom of the rows that "peek" when you hover on them */
     .peekshots {
         position:absolute;
         bottom:-150px;
@@ -167,7 +167,7 @@
                 margin-right:0;
             }
 
-/*A see more row, like "see more projects >"*/
+/* a see more row, like "see more projects >" */
 .see-more {
     height:75px;
     line-height:75px;
@@ -228,10 +228,10 @@
     }
 }
 
-/*mobile layout*/
+/* mobile layout */
 @media all and (max-width:800px) {
     #hero-image {
-        background-position:0 0; /*otherwise the background starts to repeat*/
+        background-position:0 0; /* otherwise the background starts to repeat */
     }
         #hero-text {
             position:static;
