@@ -60,28 +60,6 @@
         margin-bottom: 15px;
     }
 
-.bubbles {
-    text-align: center; /* centers the middle bubble */
-}
-    .bubbles .bubble {
-        width: 25%;
-        text-align: center;
-    }
-        .bubbles .bubble p {
-            font-size: 20px;
-        }
-        .bubbles .bubble:first-child {
-            float: left;
-            margin-left: 50px;
-        }
-        .bubbles .bubble:nth-child(2) {
-            display: inline-block; /* this is basically a replacement for float:center, it'll cause it to position based on the text-align:center in .bubbles */
-        }
-        .bubbles .bubble:last-child {
-            float: right;
-            margin-right: 50px;
-        }
-
 /* a row with an image, header, and text */
 .icon-with-text {
     color: #fff;
@@ -210,10 +188,6 @@
         .peekshots .peekshot {
             height:150px;
         }
-
-    .bubbles .bubble p {
-        font-size: 18px;
-    }
 }
 
 @media all and (max-width:875px) {
@@ -300,11 +274,5 @@
 
     .header-with-subheader {
         height: 100px;
-    }
-
-    .bubbles .bubble:nth-child(n) {
-        width: 50%;
-        float: none;
-        margin: 25px auto 25px auto;
     }
 }
