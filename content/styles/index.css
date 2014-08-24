@@ -13,7 +13,8 @@
     background-image: url(../images/GreenMountain.jpg);
     background-position:0 -200px;
 }
-    #hero-text {
+
+#hero-text {
         position: absolute;
         left: 35px;
         top: 30px;
