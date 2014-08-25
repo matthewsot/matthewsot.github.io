@@ -49,8 +49,6 @@
 
 .more-info {
     margin-top: 100px;
-    border-top: 1px solid #999;
-    padding-top: 50px;
     margin-bottom: 100px;
 }
     .more-info h1 {
@@ -168,12 +166,65 @@
         color: inherit;
     }
 
+.about-me {
+    color: #000;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    min-height: 300px;
+}
+    .about-me .face {
+        width: 300px;
+        border-radius: 300px;
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 25px;
+    }
+    .about-me .text {
+        display: inline-block;
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 375px;
+        margin-right: 25px;
+    }
+        .about-me .text h3 {
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .about-me .text p {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-weight: 300;
+            width: 100%;
+        }
+
 @media all and (max-width:1150px) {
     .peekshots {
         bottom:-125px;
     }
         .peekshots .peekshot {
             height:200px;
+        }
+
+    .about-me .face {
+        width: 250px;
+        border-radius: 250px;
+    }
+    .about-me .text {
+        margin-left: 300px;
+    }
+        .about-me .text h3 {
+            font-size: 25px;
+        }
+        .about-me .text p {
+            font-size: 18px;
         }
 }
 
@@ -200,6 +251,26 @@
     .icon-with-text .text,
     .peekshots {
         left:150px;
+    }
+
+    .about-me .face {
+        width: 30%;
+        border-radius: 100%;
+        display: block;
+        position: static;
+        margin: 0 auto;
+        top: 0;
+        transform: none;
+    }
+    .about-me .text {
+        position: static;
+        width: 95%;
+        text-align: center;
+        transform: none;
+        margin: 0 auto;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
 
