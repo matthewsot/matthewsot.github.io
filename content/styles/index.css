@@ -92,10 +92,11 @@ body > section {
 /* a large icon/text row with space for links and "peekshots" */
 .project {
     height: 300px;
+    overflow-y:hidden;
 }
     #cf-row { background-color: #1CCFAF; }
     #lhscamp-row { background-color: #44A0C8; }
-    #he-row { background-color: #373737; overflow-y:hidden; }
+    #he-row { background-color: #373737; }
 
     .project .text {
         z-index:1;
