@@ -17,18 +17,21 @@ body > section {
     background-image: url(../images/GreenMountain.jpg);
     background-position:0 -200px;
 }
-    .welcome-text {
+    .welcome > article {
             position: absolute;
             left: 35px;
             top: 30px;
             text-align: center;
             color:#999;
         }
-            #hero-text h1 {
+            .welcome h1 {
                 color: #000;
             }
-            #hero-text h3 {
+            .welcome h2 {
                 font-size: 30px;
+            }
+            .welcome h3 {
+                margin-bottom:30px;
             }
 
 .header {
