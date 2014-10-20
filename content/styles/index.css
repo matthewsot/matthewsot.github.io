@@ -114,6 +114,7 @@ body > section {
             height:50px;
             background-size:cover;
             margin-right:25px;
+            border-bottom:none;
         }
             /* https://github.com/logos */
             .links .github-link {
@@ -258,7 +259,7 @@ footer {
         width:75px;
         margin-left:0;
     }
-    
+
     .icon-with-text .text,
     .peekshots {
         left:150px;
