@@ -1,117 +1,365 @@
-h1 {
-    font-size: 30px;
-}
-
-header {
-    text-align: center;
-    margin-top: 15px;
-}
-    header img {
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-    }
-
-ul {
-    padding: 0;
+body > section {
+    width: 100%;
     margin: 0;
-    list-style-type: none;
+    position:relative;
+    background-color:#fff;
+    text-align: center;
 }
-    ul li {
-        display: inline-block;
+    body > section > h1 {
+        margin: 20px auto;
+        text-align:center;
     }
-        ul li + li::before {
-            content: " - ";
-        }
 
-#projects article {
+.quick-info {
+    height: 300px;
+    background-size:cover;
+    /* image from http://unsplash.com/ */
+    background-image: url(../images/GreenMountain.jpg);
+    background-position:0 -200px;
+}
+    .quick-info > article {
+            position: absolute;
+            left: 35px;
+            top: 30px;
+            text-align: center;
+            color:#999;
+        }
+            .quick-info h1 {
+                color: #000;
+            }
+            .quick-info h2 {
+                font-size: 30px;
+            }
+            .quick-info h3 {
+                margin-bottom:30px;
+            }
+
+.header {
+    height:100px;
+    line-height:100px;
+    text-align:center;
+    font-size:35px;
+}
+
+.header-with-subheader {
+    height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+    .header-with-subheader h1 {
+        font-size: 35px;
+    }
+    .header-with-subheader h3 {
+        color: #999;
+    }
+
+.more-info {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+    .more-info h1 {
+        font-size: 35px; /* to match the .header font size */
+        margin-bottom: 30px;
+    }
+    .more-info h2 {
+        margin-bottom: 15px;
+    }
+
+/* a row with an image, header, and text */
+.icon-with-text {
     color: #fff;
     text-align: left;
-    height: 250px;
-    overflow-y: hidden;
+    position:relative;
 }
-    .cf { background-color: #1CCFAF; }
-    .lhscamp { background-color: #44A0C8; }
-    .action { background-color: #8471B1; }
-    .he { background-color: #373737; }
+    .icon-with-text .icon {
+        width:150px;
+        position:absolute;
+        left: 30px;
+        top:50%;
+        transform:translateY(-50%); /* TODO: make a fallback for older browsers */
+    }
+    .icon-with-text .text {
+        top:20px;
+        left:225px;
+        position:absolute;
+    }
+        .icon-with-text .text p {
+            font-size:25px;
+            margin:0;
+            width:90%;
+        }
 
-    #projects article .icon {
-        width: 100px;
-        position: absolute;
-        left: 75px;
-        top: 50%;
-        transform: translateY(-50%);
+/* a large icon/text row with space for links and "peekshots" */
+.project {
+    height: 300px;
+    overflow-y:hidden;
+}
+    #cf-row { background-color: #1CCFAF; }
+    #lhscamp-row { background-color: #44A0C8; }
+    #action-row { background-color: #8471B1; }
+    #he-row { background-color: #373737; }
+
+    .project .text {
+        z-index:1;
     }
-    #projects article .text {
-        top: 27px;
-        left: 230px;
-        position: absolute;
+
+    .project .links {
+        position:absolute;
+        top:20px;
+        right:40px;
+        z-index:10; /* we want this to be higher up than .text, which otherwise sits on top of it */
     }
-        #projects article .text h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin: 0;
-            display: inline-block;
+        .links a {
+            display:inline-block;
+            width:50px;
+            height:50px;
+            background-size:cover;
+            margin-right:25px;
+            border-bottom:none;
         }
-        #projects article .text .links {
-            display: inline-block;
-            position: relative;
-            top: 8px;
-            left: 10px;
-        }
-            .links a {
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-                background-size: cover;
-                margin-right: 15px;
-                border-bottom: none;
+            /* https://github.com/logos */
+            .links .github-link {
+                background-image: url(../images/links/Github.Light.png);
             }
-                /* https://github.com/logos */
-                .links .github-link { background-image: url(../images/links/Github.Light.png); }
-                    .links .github-link:hover { background-image: url(../images/links/Github.Dark.png); }
-                /* globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128 */
-                .links .web-link { background-image: url(../images/links/Web.Light.png); }
-                    .links .web-link:hover { background-image: url(../images/links/Web.Dark.png); }
-
-        #projects article .text .tech {
-            margin: 5px 0;
-            opacity: 0.7;
-            font-size: 16px;
-        }
-        #projects article .text p {
-            font-size: 20px;
-            margin: 0;
-            width: 90%;
-        }
+                .links .github-link:hover {
+                    background-image: url(../images/links/Github.Dark.png);
+                }
+            /* globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128 */
+            .links .web-link {
+                background-image: url(../images/links/Web.Light.png);
+            }
+                .links .web-link:hover {
+                    background-image: url(../images/links/Web.Dark.png);
+                }
 
     /* peekshots are the screenshots at the bottom of the rows that "peek" when you hover on them */
-    #projects article .peekshots {
-        position: absolute;
-        bottom: -130px;
-        left: 225px;
+    .peekshots {
+        position:absolute;
+        bottom:-150px;
+        left:225px;
     }
-        #projects article .peekshots .peekshot {
+        .peekshots .peekshot {
             float: left;
-            height: 200px;
+            height: 225px;
             margin-right: 25px;
             box-shadow: -5px -5px 20px 0 #000;
             cursor: pointer;
             transition: margin-top linear 0.1s;
             margin-top: 25px;
         }
-            #projects article .peekshots .peekshot:hover {
-                margin-top: 0;
+            .peekshots .peekshot:hover {
+                margin-top:0;
             }
-            #projects article .peekshots .peekshot:last-child {
-                margin-right: 0;
+            .peekshots .peekshot:last-child {
+                margin-right:0;
             }
 
-#about-me {
-    text-align: center;
-    margin-top: 25px;
+/* a see more row, like "see more projects >" */
+.see-more {
+    height:75px;
+    line-height:75px;
+    text-align:right;
+    background-color:#FF3C58;
 }
-    #about-me p {
-        max-width: 800px;
-        margin: 15px auto 0;
+    .see-more a {
+        margin-right:50px;
+        font-size:25px;
+        color:#fff;
     }
+
+.recognition {
+    height:225px;
+}
+    #FBLA { background-color:#373737; }
+    #nokia { background-color:#44A0C8; }
+    #codeday { background-color:#DD5D5C; }
+    .recognition a {
+        color: inherit;
+    }
+
+.about-me {
+    color: #000;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    min-height: 350px;
+}
+    .about-me .face {
+        width: 300px;
+        border-radius: 300px;
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 40px 0 0 25px;
+    }
+    .about-me .text {
+        display: inline-block;
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 40px 25px 0 375px;
+    }
+        .about-me .text h3 {
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .about-me .text p {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-weight: 300;
+            width: 100%;
+        }
+
+footer {
+    text-align:center;
+}
+
+@media all and (max-width:1150px) {
+    .peekshots {
+        bottom:-125px;
+    }
+        .peekshots .peekshot {
+            height:200px;
+        }
+
+    .about-me .face {
+        width: 250px;
+        border-radius: 250px;
+    }
+    .about-me .text {
+        margin-left: 300px;
+    }
+        .about-me .text h3 {
+            font-size: 25px;
+        }
+        .about-me .text p {
+            font-size: 18px;
+        }
+}
+
+@media all and (max-width:1050px) {
+    .icon-with-text .text p {
+        font-size:20px;
+        margin-top:15px;
+    }
+
+    .peekshots {
+        bottom:-90px;
+    }
+        .peekshots .peekshot {
+            height:150px;
+        }
+}
+
+@media all and (max-width:875px) {
+    .icon-with-text .icon {
+        width:75px;
+        margin-left:0;
+    }
+
+    .icon-with-text .text,
+    .peekshots {
+        left:150px;
+    }
+
+    .about-me .face {
+        width: 30%;
+        border-radius: 100%;
+        display: block;
+        position: static;
+        margin: 0 auto;
+        top: 0;
+        transform: none;
+    }
+    .about-me .text {
+        position: static;
+        width: 95%;
+        text-align: center;
+        transform: none;
+        margin: 0 auto;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* mobile layout */
+@media all and (max-width:800px) {
+    /* TODO: this isn't very visible, check the colors on the green background */
+    .quick-info {
+        background-position:0 0; /* otherwise the background starts to repeat */
+    }
+        .quick-info > article {
+            position:static;
+            padding-top:30px;
+            width:100%;
+        }
+
+    .header {
+        height:100px;
+        line-height:100px;
+    }
+
+    .icon-with-text {
+        text-align:center;
+        height:auto;
+    }
+        .icon-with-text .icon {
+            float:none;
+            position:static;
+            margin:10px 0 20px 0;
+            transform:none;
+            width:100px;
+        }
+
+        .icon-with-text .text {
+            position:static;
+            width:95%;
+            margin:0 auto;
+        }
+            .icon-with-text .text p {
+                width:100%;
+                font-size:25px;
+            }
+
+    .project {
+        padding-bottom:75px;
+    }
+        .project .links {
+            position:static;
+        }
+            .links a {
+                margin:0 10px 0 10px;
+            }
+        .project .peekshots {
+            position:static;
+        }
+            .peekshots .peekshot {
+                float:none;
+                display:block;
+                width:40%;
+                height:auto;
+                margin:50px auto 0 auto;
+                transition:none;
+            }
+                .peekshots .peekshot:hover {
+                    margin-top:50px;
+                }
+                .peekshots .peekshot:last-child {
+                    margin: 50px auto 0 auto;
+                }
+
+    .recognition {
+        padding-top:20px;
+        padding-bottom:100px;
+    }
+
+    .header-with-subheader {
+        height: 100px;
+    }
+}
