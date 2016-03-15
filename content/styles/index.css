@@ -9,6 +9,31 @@ body > section {
         margin: 20px auto;
         text-align:center;
     }
+    
+header {
+    text-align: center;
+    margin-top: 15px;
+}
+    header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+
+ul.external-profiles {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+    ul.external-profiles li {
+        display: inline-block;
+    }
+        ul.external-profiles li + li::before {
+            content: " - ";
+        }
 
 .quick-info {
     height: 300px;
