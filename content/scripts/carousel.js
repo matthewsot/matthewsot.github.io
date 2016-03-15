@@ -5,6 +5,14 @@ function updateSelector() {
     selector.css("background-color", $(".carousel .active").css("background-color"));
 }
 
+var carouselInterval;
+function resetInterval() {
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(function() {
+        $(".carousel .forward").first().click();
+    }, 10000);
+}
+
 function moveCarouselTo(next, reverse) {
     var carousel = $(".carousel");
     var current = carousel.find(".active");
@@ -16,6 +24,7 @@ function moveCarouselTo(next, reverse) {
     current.css("animation", "carousel-out-" + forwardBackward + " " + animationDuration + "s forwards linear 1");
     next.css("animation", "carousel-in-" + forwardBackward + " " + animationDuration + "s forwards linear 1");
     updateSelector();
+    resetInterval();
 }
 
 $(".carousel .forward").click(function() {
