@@ -135,7 +135,9 @@ ul {
             border-radius: 5px;
             margin-bottom: 25px;
             cursor: pointer;
+            opacity: 0.8;
         }
+            #numbers article:hover { opacity: 1; }
             #numbers article h1 {
                 padding-top: 5px;
                 margin-bottom: 0;
