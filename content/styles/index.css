@@ -11,43 +11,53 @@ header {
         font-size: 30px;
     }
 
-ul.external-profiles {
+ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-    ul.external-profiles li {
+    ul li {
         display: inline-block;
     }
-        ul.external-profiles li + li::before {
+        ul li + li::before {
             content: " - ";
         }
 
 #projects article {
     color: #fff;
     text-align: left;
-    height: 300px;
+    height: 250px;
     overflow-y: hidden;
 }
-    #cf-row { background-color: #1CCFAF; }
-    #lhscamp-row { background-color: #44A0C8; }
-    #action-row { background-color: #8471B1; }
-    #he-row { background-color: #373737; }
+    .cf { background-color: #1CCFAF; }
+    .lhscamp { background-color: #44A0C8; }
+    .action { background-color: #8471B1; }
+    .he { background-color: #373737; }
 
     #projects article .icon {
-        width: 150px;
+        width: 100px;
         position: absolute;
-        left: 60px;
+        left: 75px;
         top: 50%;
         transform: translateY(-50%);
     }
     #projects article .text {
-        top: 20px;
+        top: 27px;
         left: 230px;
         position: absolute;
     }
+        #projects article .text h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+        #projects article .text .tech {
+            margin: 5px 0;
+            opacity: 0.7;
+            font-size: 16px;
+        }
         #projects article .text p {
-            font-size: 25px;
+            font-size: 20px;
             margin: 0;
             width: 90%;
         }
@@ -84,12 +94,12 @@ ul.external-profiles {
     /* peekshots are the screenshots at the bottom of the rows that "peek" when you hover on them */
     #projects article .peekshots {
         position: absolute;
-        bottom: -150px;
+        bottom: -130px;
         left: 225px;
     }
         #projects article .peekshots .peekshot {
             float: left;
-            height: 225px;
+            height: 200px;
             margin-right: 25px;
             box-shadow: -5px -5px 20px 0 #000;
             cursor: pointer;
