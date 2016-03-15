@@ -1,3 +1,7 @@
+h1 {
+    font-size: 30px;
+}
+
 header {
     text-align: center;
     margin-top: 15px;
@@ -6,9 +10,6 @@ header {
         width: 150px;
         height: 150px;
         border-radius: 75px;
-    }
-    header h1 {
-        font-size: 30px;
     }
 
 ul {
@@ -105,3 +106,15 @@ ul {
             #projects article .peekshots .peekshot:last-child {
                 margin-right: 0;
             }
+
+#about-me {
+    text-align: center;
+    margin-top: 25px;
+}
+    #about-me h1 {
+        
+    }
+    #about-me p {
+        max-width: 800px;
+        margin: 15px auto 0;
+    }
