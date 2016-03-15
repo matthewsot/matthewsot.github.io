@@ -23,44 +23,11 @@ ul.external-profiles {
             content: " - ";
         }
 
-.carousel {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    margin-top: 25px;
-    position: relative;
-}
-    .carousel .back,
-    .carousel .forward {
-        z-index: 100;
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #fff;
-        font-size: 40px;
-    }
-        .carousel .back { left: 25px; }
-        .carousel .forward { right: 25px; }
-
-    .carousel article {
-        width: 100%;
-        height: 300px;
-
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
-        .carousel article:nth-child(2) {
-            left: 0;
-        }
-
 #projects article {
     color: #fff;
     text-align: left;
-    position:relative;
     height: 300px;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
     #cf-row { background-color: #1CCFAF; }
     #lhscamp-row { background-color: #44A0C8; }
@@ -70,13 +37,13 @@ ul.external-profiles {
     #projects article .icon {
         width: 150px;
         position: absolute;
-        left: 30px;
+        left: 60px;
         top: 50%;
         transform: translateY(-50%);
     }
     #projects article .text {
         top: 20px;
-        left: 225px;
+        left: 230px;
         position: absolute;
     }
         #projects article .text p {

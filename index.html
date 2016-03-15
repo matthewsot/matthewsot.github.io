@@ -8,6 +8,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
         <link href="content/styles/shared.css" rel="stylesheet" />
+        <link href="content/styles/carousel.css" rel="stylesheet" />
         <link href="content/styles/index.css" rel="stylesheet" />
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -26,7 +27,7 @@
 
         <section class="carousel" id="projects">
             <div class="back">&lt;</div>
-            <article id="cf-row">
+            <article id="cf-row" class="active">
                 <img class="icon" src="content/images/logos/classfinder.png" alt="Classfinder" />
 
                 <div class="links">
@@ -167,7 +168,6 @@
             </article>
         </section>
 
-
         <footer>
             <section class="more-info">
                 <h1>More Info</h1>
@@ -181,6 +181,7 @@
             </section>
         </footer>
 
+        <script type="text/javascript" src="content/scripts/carousel.js"></script>
         <script type="text/javascript">
             $(".peekshot").click(function () {
                 wedge.show($(this).attr("src"), 'img', $(this).attr("title"));
