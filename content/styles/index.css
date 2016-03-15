@@ -109,9 +109,30 @@ ul {
 
 #about-me {
     text-align: center;
-    margin-top: 25px;
+    margin: 25px auto;
 }
     #about-me p {
         max-width: 800px;
         margin: 15px auto 0;
+    }
+
+footer {
+    background-color: #373737;
+    color: #fff;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 18px 0 30px;
+}
+    footer h1 {
+        margin: 0;
+    }
+    footer section {
+        margin: 0;
+    }
+    footer hr {
+        width: 350px;
+        margin: 25px auto;
+    }
+    footer ul {
+        margin: 0 auto 0;
     }
