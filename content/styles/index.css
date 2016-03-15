@@ -109,7 +109,7 @@ ul {
 
 #about-me {
     text-align: center;
-    margin: 25px auto;
+    margin: 35px auto;
 }
     #about-me p {
         max-width: 800px;
@@ -118,26 +118,29 @@ ul {
 
 #by-the-numbers {
     text-align: center;
+    margin: 25px auto;
 }
     #by-the-numbers #numbers {
+        width: 95%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin: 25px 0 0;
+        margin: 25px auto 0;
     }
         #numbers article {
-            width: 250px;
+            width: 20%;
             padding: 0 5px;
-            margin: 0 25px;
             flex-shrink: 0;
             flex-grow: 0;
-            border: 1px solid #333;
+            border: 1px solid rgba(3, 3, 3, 0.5);
             border-radius: 5px;
             margin-bottom: 25px;
             cursor: pointer;
-            opacity: 0.8;
+            transition: all 0.1s linear;
         }
-            #numbers article:hover { opacity: 1; }
+            #numbers article:hover { border: 1px solid rgba(3, 3, 3, 1); background-color: rgba(3, 3, 3, 0.03); }
+            #numbers article:hover p { opacity: 1; }
+
             #numbers article h1 {
                 padding-top: 5px;
                 margin-bottom: 0;
@@ -146,6 +149,7 @@ ul {
                 opacity: 0.8;
                 font-size: 15px;
                 margin: 5px auto;
+                transition: all 0.1s linear;
             }
 
 footer {
