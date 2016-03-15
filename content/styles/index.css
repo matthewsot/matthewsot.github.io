@@ -50,7 +50,29 @@ ul {
             font-size: 28px;
             font-weight: 600;
             margin: 0;
+            display: inline-block;
         }
+        #projects article .text .links {
+            display: inline-block;
+            position: relative;
+            top: 8px;
+            left: 10px;
+        }
+            .links a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: cover;
+                margin-right: 15px;
+                border-bottom: none;
+            }
+                /* https://github.com/logos */
+                .links .github-link { background-image: url(../images/links/Github.Light.png); }
+                    .links .github-link:hover { background-image: url(../images/links/Github.Dark.png); }
+                /* globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128 */
+                .links .web-link { background-image: url(../images/links/Web.Light.png); }
+                    .links .web-link:hover { background-image: url(../images/links/Web.Dark.png); }
+
         #projects article .text .tech {
             margin: 5px 0;
             opacity: 0.7;
@@ -61,35 +83,6 @@ ul {
             margin: 0;
             width: 90%;
         }
-
-    #projects article .links {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        z-index: 10; /* we want this to be higher up than .text, which otherwise sits on top of it */
-    }
-        .links a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-size: cover;
-            margin-right: 25px;
-            border-bottom: none;
-        }
-            /* https://github.com/logos */
-            .links .github-link {
-                background-image: url(../images/links/Github.Light.png);
-            }
-                .links .github-link:hover {
-                    background-image: url(../images/links/Github.Dark.png);
-                }
-            /* globe icon modified from https://www.iconfinder.com/icons/296204/communication_connection_earth_global_globe_international_internet_mundo_network_orb_planet_web_world_icon#size=128 */
-            .links .web-link {
-                background-image: url(../images/links/Web.Light.png);
-            }
-                .links .web-link:hover {
-                    background-image: url(../images/links/Web.Dark.png);
-                }
 
     /* peekshots are the screenshots at the bottom of the rows that "peek" when you hover on them */
     #projects article .peekshots {
