@@ -30,6 +30,9 @@ img {
             display: inline-block;
             margin: 0 5px;
         }
+h2 {
+    font-weight: 400;
+}
 
 main {
     display: flex;
