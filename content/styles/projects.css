@@ -6,3 +6,31 @@ img {
 h1 {
     font-size: 27px;
 }
+
+h2 {
+    font-size: 20px;
+}
+
+ul#projects {
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+}
+    ul#projects li + li {
+        margin-top: 15px;
+    }
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0 auto;
+}
+    main ul {
+        font-size: 18px;
+        width: 300px;
+    }
+    main #slider-bar {
+        height: 175px;
+    }
