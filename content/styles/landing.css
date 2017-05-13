@@ -15,6 +15,7 @@ img {
     width: 200px;
     height: 200px;
     border-radius: 100px;
+    margin-top: 25px;
 }
 #quick-links {
     list-style-type: none;
@@ -34,6 +35,11 @@ h2 {
     font-weight: 400;
 }
 
+p {
+    max-width: 800px;
+    margin: 25px auto;
+}
+
 main {
     display: flex;
     justify-content: space-between;
@@ -49,7 +55,7 @@ main {
     main #slider-bar {
         position: relative;
         top: -12.5px;
-        height: 250px;
+        height: 190px;
         background-color: black;
         width: 7px;
         border-radius: 2px;
