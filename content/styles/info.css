@@ -4,11 +4,19 @@ img {
     border-radius: 75px;
 }
 h1 {
-    font-size: 27px;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 h2 {
     font-size: 20px;
+}
+
+hr {
+    margin: 25px auto;
+    border: none;
+    border-top: 1px solid #888;
+    width: 90%;
 }
 
 ul#projects {
@@ -21,16 +29,10 @@ ul#projects {
         margin-top: 15px;
     }
 
-main {
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-    margin: 0 auto;
+#where-to ul {
+    font-size: 18px;
+    width: 300px;
 }
-    main ul {
-        font-size: 18px;
-        width: 300px;
-    }
-    main #slider-bar {
-        height: 175px;
-    }
+#where-to #slider-bar {
+    height: 175px;
+}
