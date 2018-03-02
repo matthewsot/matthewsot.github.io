@@ -23,6 +23,7 @@
         e.preventDefault();
 
         var anchor = this;
+        var originalDisplay = anchor.style.display;
         var email = anchor.href.substr("mailto:".length);
 
         // Create elements for the options
@@ -42,16 +43,29 @@
         choiceView.textContent = "View Address";
         choiceView.href = anchor.href;
 
-        // Removes elements and replaces with some text
-        var finishWithText = function (displayText) {
+        var finish = function (resetAnchor) {
             choiceSend.remove();
             choiceCopy.remove();
             choiceView.remove();
             delim.remove();
+        };
+
+        // Removes elements and replaces with some text
+        // flash determines whether the text stays for ever
+        // or disappears after some time
+        var finishWithText = function (displayText, flash) {
+            finish();
 
             var text = document.createElement("span");
             text.textContent = displayText;
             anchor.parentNode.insertBefore(text, anchor);
+            
+            if (flash) {
+                setTimeout(function () {
+                    text.remove();
+                    anchor.style.display = originalDisplay;
+                }, 750);
+            }
         };
 
         // Handles copy/view clicks
@@ -59,9 +73,9 @@
             e.preventDefault();
 
             if (copyText(email)) {
-                finishWithText("Copied: " + email);
+                finishWithText("Copied!", true);
             } else {
-                finishWithText(email);
+                finishWithText(email, false);
             }
 
             return false;
@@ -69,7 +83,7 @@
         choiceCopy.addEventListener("click", handleCopy);
 
         var handleView = function (e) {
-            finishWithText(email);
+            finishWithText(email, false);
             e.preventDefault();
             return false;
         };
