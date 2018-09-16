@@ -26,6 +26,35 @@
 
     <ul id="projects">
         <li>
+            <u>ISA Mapper: A Compute- and Hardware-Agnostic Compiler for Heterogeneous Systems</u>
+            <p>
+                Modern computer architectures are becoming more heterogeneous
+                and parallel, however existing compilers still assume outdated,
+                von Neumann-like hardware. Existing solutions to
+                this problem in the deep learning space (such as TVM and
+                PlaidML) continue to place unreasonable assumptions on the
+                target architecture (ex. a GPU with managed cache) or require
+                significant manual input from the programmer (to determine data
+                movement, lowering rules, and scheduling). We develop the first
+                fully-automated compiler for heterogeneous parallel systems
+                that can compile linear-algebra programs onto any system
+                described as a graph of compute and memory nodes. In
+                particular, hardware exposes instruction support in the same
+                language that programs are described in, allowing the system to
+                support arbitrary tensor instruction sets including matrix
+                multiplication and convolution. Tests on an upcoming Intel deep
+                learning architecture achieve 3-5X faster execution times than
+                state-of-the-art, hand-optimized kernel libraries, and my work
+                has already influenced other compiler and software teams across
+                the company.
+                <br/><br/>
+                Presented throughout Intel and as a lightning talk at ASPLUW
+                2018 (UW computer systems retreat).
+                <br/>
+                Targeting publication for late 2018.
+            </p>
+        </li>
+        <li>
             <a href="https://arxiv.org/abs/1802.06944" target="_blank">
                 DeepThin: A Self-Compressing Library for Deep Neural Networks
             </a>
