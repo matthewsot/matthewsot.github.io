@@ -11,6 +11,12 @@ a {
 }
     a:hover { border-bottom-style: solid; }
 
+u {
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+}
+    u:hover { border-bottom-style: solid; }
+
 img {
     margin-top: 25px;
 }
