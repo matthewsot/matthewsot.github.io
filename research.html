@@ -27,6 +27,85 @@
     <ul id="projects">
         <li>
             <u>
+                <a href="https://arxiv.org/abs/1908.06223" target="_blank">
+                    A Symbolic Neural Network Representation and its
+                    Application to Understanding, Verifying, and Patching
+                    Networks
+                </a>
+            </u>
+            <p>
+                Analysis and manipulation of trained neural networks is a
+                challenging and important problem. We propose a symbolic
+                representation for piecewise-linear neural networks and discuss
+                its efficient computation. With this representation, one can
+                translate the problem of analyzing a complex neural network
+                into that of analyzing a finite set of affine functions. We
+                demonstrate the use of this representation for three
+                applications.  First, we apply the symbolic representation to
+                computing weakest preconditions on network inputs, which we use
+                to exactly visualize the advisories made by a network meant to
+                operate an aircraft collision avoidance system.  Second, we use
+                the symbolic representation to compute strongest postconditions
+                on the network outputs, which we use to perform bounded model
+                checking on standard neural network controllers.  Finally, we
+                show how the symbolic representation can be combined with a new
+                form of neural network to perform patching; i.e., correct
+                user-specified behavior of the network.
+                <br/><br/>
+                Currently under conference review.
+                <br/><br/>
+                Co-authored by <a href="http://thakur.cs.ucdavis.edu/"
+                target="_blank">Aditya Thakur</a> and completed while part of
+                the <a href="https://95616arg.github.io/" target="_blank">Davis
+                Automated Reasoning Group</a> (DARG).
+                <br/>
+            </p>
+        </li>
+        <li>
+            <u>
+                <a href="https://arxiv.org/abs/1908.06214" target="_blank">
+                    Computing Linear Restrictions of Neural Networks
+                </a>
+            </u>
+            <p>
+                A linear restriction of a function is the same function with
+                its domain restricted to points on a given line. This paper
+                addresses the problem of computing a succinct representation
+                for a linear restriction of a piecewise-linear neural network.
+                This primitive, which we call ExactLine, allows us to exactly
+                characterize the result of applying the network to all of the
+                infinitely many points on a line. In particular, ExactLine
+                computes a partitioning of the given input line segment such
+                that the network is affine on each partition. We present an
+                efficient algorithm for computing ExactLine for networks that
+                use ReLU, MaxPool, batch normalization, fully-connected,
+                convolutional, and other layers, along with several
+                applications. First, we show how to exactly determine decision
+                boundaries of an ACAS Xu neural network, providing
+                significantly improved confidence in the results compared to
+                prior work that sampled finitely many points in the input
+                space. Next, we demonstrate how to exactly compute integrated
+                gradients, which are commonly used for neural network
+                attributions, allowing us to show that the prior
+                heuristic-based methods had relative errors of 25-45% and show
+                that a better sampling method can achieve higher accuracy with
+                less computation. Finally, we use ExactLine to empirically
+                falsify the core assumption behind a well-known hypothesis
+                about adversarial examples, and in the process identify
+                interesting properties of adversarially-trained networks. 
+                <br/><br/>
+                Full paper accepted for publication and poster presentation at
+                NeurIPS 2019.
+                <br/><br/>
+                Co-authored by <a href="http://thakur.cs.ucdavis.edu/"
+                target="_blank">Aditya Thakur</a> and completed while part of
+                the <a href="https://95616arg.github.io/" target="_blank">Davis
+                Automated Reasoning Group</a> (DARG).
+                <br/>
+            </p>
+        </li>
+        <li>
+            <u>
                 <a href="https://arxiv.org/abs/1810.09958" target="_blank">
                     ISA Mapper: A Compute and Hardware Agnostic Deep Learning Compiler
                 </a>
@@ -56,6 +135,11 @@
                 ACM Computing Frontiers 2019. Also presented throughout Intel
                 and as a lightning talk at ASPLUW 2018 (UW computer systems
                 retreat).
+                <br/><br/>
+                Completed during an internship with the Intel Nervana
+                group, co-authored with individuals (A. Venkat, M. Anderson, E.
+                Georganas, A. Heinecke, and J. Knight) from Intel Labs and
+                Intel Nervana.
                 <br/>
             </p>
         </li>
@@ -73,6 +157,9 @@
                 for Deep Neural Networks") accepted for publication and oral
                 presentation at DAC 2019. Extended abstract presented as a
                 poster at SysML 2018.
+                <br/><br/>
+                Completed during an internship with Intel Labs, co-authored by
+                Sara Baghsorkhi from Intel Labs.
             </p>
         </li>
     </ul>
