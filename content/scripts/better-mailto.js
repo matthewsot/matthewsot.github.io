@@ -2,7 +2,7 @@
 // Note that links will default to their mailto: form on noscript browsers, ensuring graceful
 // fallback.
 
-// Licensed under the MIT license. Contact masotoudeh@ucdavis.edu
+// Licensed under the MIT/Expat license. Contact masotoudeh@ucdavis.edu
 
 (function() {
     function copyText(text) {
@@ -17,7 +17,7 @@
         el.remove();
         return successful;
     };
-    
+
     // Handles the clicking of an <a href="mailto:..."></a> tag
     function handleMailto(e) {
         e.preventDefault();
@@ -59,7 +59,7 @@
             var text = document.createElement("span");
             text.textContent = displayText;
             anchor.parentNode.insertBefore(text, anchor);
-            
+
             if (flash) {
                 setTimeout(function () {
                     text.remove();

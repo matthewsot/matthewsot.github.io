@@ -11,15 +11,18 @@
     <img src="content/images/matthew.jpg" />
     <h1><a href="index.html">Matthew Sotoudeh</a> - Research &amp; Publications</h1>
     <ul id="quick-links">
-        <li><a href="https://github.com/matthewsot" target="_blank">Github</a></li>
-        <li><a href="https://linkedin.com/in/matthewsotoudeh" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:masotoudeh@ucdavis.edu" target="_blank">Email</a></li>
-        <li><a href="content/public-key.asc" target="_blank">PGP Key</a></li>
+        <li><a href="https://github.com/matthewsot">Github</a></li>
+        <li><a href="https://linkedin.com/in/matthewsotoudeh">LinkedIn</a></li>
+        <li><a href="mailto:masotoudeh@ucdavis.edu">Email</a></li>
+        <li><a href="content/public-key.asc">PGP Key</a></li>
     </ul>
 
     <p>
-        I recently completed a summer research project developing a novel
-        compiler system as an intern with Intel's AIPG, Office of the CTO.
+        I am currently working on a variety of projects with the Davis
+        Automated Reasoning Group.
+        <br/>
+        Previously, I have completed projects as an intern at Intel Labs and
+        Intel Nervana.
     </p>
 
     <hr/>
@@ -27,139 +30,84 @@
     <ul id="projects">
         <li>
             <u>
-                <a href="https://arxiv.org/abs/1908.06223" target="_blank">
+                <a href="https://arxiv.org/abs/1908.06223">
                     A Symbolic Neural Network Representation and its
                     Application to Understanding, Verifying, and Patching
                     Networks
                 </a>
             </u>
             <p>
-                Analysis and manipulation of trained neural networks is a
-                challenging and important problem. We propose a symbolic
-                representation for piecewise-linear neural networks and discuss
-                its efficient computation. With this representation, one can
-                translate the problem of analyzing a complex neural network
-                into that of analyzing a finite set of affine functions. We
-                demonstrate the use of this representation for three
-                applications.  First, we apply the symbolic representation to
-                computing weakest preconditions on network inputs, which we use
-                to exactly visualize the advisories made by a network meant to
-                operate an aircraft collision avoidance system.  Second, we use
-                the symbolic representation to compute strongest postconditions
-                on the network outputs, which we use to perform bounded model
-                checking on standard neural network controllers.  Finally, we
-                show how the symbolic representation can be combined with a new
-                form of neural network to perform patching; i.e., correct
-                user-specified behavior of the network.
-                <br/><br/>
-                Currently under conference review.
-                <br/><br/>
-                Co-authored by <a href="http://thakur.cs.ucdavis.edu/"
-                target="_blank">Aditya Thakur</a> and completed while part of
-                the <a href="https://95616arg.github.io/" target="_blank">Davis
-                Automated Reasoning Group</a> (DARG).
+                Extended abstract accepted to the Principles Of Programming
+                Languages (POPL) 2020 Student Research Competition.
                 <br/>
+
+                <a href="https://arxiv.org/abs/1908.06223">[arXiv]</a>
+                <a href="https://github.com/95616ARG/SyReNN">[Code]</a>
             </p>
         </li>
         <li>
             <u>
-                <a href="https://arxiv.org/abs/1908.06214" target="_blank">
+                <a href="content/papers/correcting_dnns_workshop.pdf">
+                    Correcting Deep Neural Networks with Small, Generalizing
+                    Patches
+                </a>
+            </u>
+            <p>
+                Full paper accepted for poster presentation at the NeurIPS 2019
+                Workshop on Safety and Robustness in Decision Making.
+                <br/>
+                <a href="content/papers/correcting_dnns_workshop.pdf">[PDF]</a>
+                <a href="https://github.com/95616ARG/SyReNN">[Code]</a>
+            </p>
+        </li>
+        <li>
+            <u>
+                <a href="https://arxiv.org/abs/1908.06214">
                     Computing Linear Restrictions of Neural Networks
                 </a>
             </u>
             <p>
-                A linear restriction of a function is the same function with
-                its domain restricted to points on a given line. This paper
-                addresses the problem of computing a succinct representation
-                for a linear restriction of a piecewise-linear neural network.
-                This primitive, which we call ExactLine, allows us to exactly
-                characterize the result of applying the network to all of the
-                infinitely many points on a line. In particular, ExactLine
-                computes a partitioning of the given input line segment such
-                that the network is affine on each partition. We present an
-                efficient algorithm for computing ExactLine for networks that
-                use ReLU, MaxPool, batch normalization, fully-connected,
-                convolutional, and other layers, along with several
-                applications. First, we show how to exactly determine decision
-                boundaries of an ACAS Xu neural network, providing
-                significantly improved confidence in the results compared to
-                prior work that sampled finitely many points in the input
-                space. Next, we demonstrate how to exactly compute integrated
-                gradients, which are commonly used for neural network
-                attributions, allowing us to show that the prior
-                heuristic-based methods had relative errors of 25-45% and show
-                that a better sampling method can achieve higher accuracy with
-                less computation. Finally, we use ExactLine to empirically
-                falsify the core assumption behind a well-known hypothesis
-                about adversarial examples, and in the process identify
-                interesting properties of adversarially-trained networks. 
-                <br/><br/>
                 Full paper accepted for publication and poster presentation at
-                NeurIPS 2019.
-                <br/><br/>
-                Co-authored by <a href="http://thakur.cs.ucdavis.edu/"
-                target="_blank">Aditya Thakur</a> and completed while part of
-                the <a href="https://95616arg.github.io/" target="_blank">Davis
-                Automated Reasoning Group</a> (DARG).
+                the Conference on Neural Information Processing Systems
+                (NeurIPS) 2019.
                 <br/>
+                <a href="https://arxiv.org/abs/1908.06214">[arXiv]</a>
+                <a href="https://papers.nips.cc/paper/9562-computing-linear-restrictions-of-neural-networks">[Proceedings]</a>
+                <a href="https://doi.org/10.5281/zenodo.3520101">[Poster]</a>
+                <a href="https://doi.org/10.5281/zenodo.3520103">[Slides]</a>
+                <a href="https://github.com/95616ARG/SyReNN">[Code]</a>
             </p>
         </li>
         <li>
             <u>
-                <a href="https://arxiv.org/abs/1810.09958" target="_blank">
+                <a href="https://arxiv.org/abs/1810.09958">
                     ISA Mapper: A Compute and Hardware Agnostic Deep Learning Compiler
                 </a>
             </u>
             <p>
-                Modern computer architectures are becoming more heterogeneous
-                and parallel, however existing compilers still assume outdated,
-                von Neumann-like hardware. Existing solutions to this problem
-                in the deep learning space (such as TVM and PlaidML) continue
-                to place unreasonable assumptions on the target architecture
-                (ex. a GPU with managed cache) or require significant manual
-                input from the programmer (to determine data movement, lowering
-                rules, and scheduling). We develop the first fully-automated
-                compiler for heterogeneous parallel systems that can compile
-                linear-algebra programs onto any system described as a graph of
-                compute and memory nodes. In particular, hardware exposes
-                instruction support in the same language that programs are
-                described in, allowing the system to support arbitrary tensor
-                instruction sets including matrix multiplication and
-                convolution. Tests on an upcoming deep learning architecture
-                show ISAM can achieve up to 3X faster execution times than
-                state-of-the-art, hand-optimized kernel libraries. My work has
-                already influenced compiler and software teams across the
-                company.
-                <br/><br/>
                 Full paper accepted for publication and oral presentation at
                 ACM Computing Frontiers 2019. Also presented throughout Intel
                 and as a lightning talk at ASPLUW 2018 (UW computer systems
                 retreat).
-                <br/><br/>
-                Completed during an internship with the Intel Nervana
-                group, co-authored with individuals (A. Venkat, M. Anderson, E.
-                Georganas, A. Heinecke, and J. Knight) from Intel Labs and
-                Intel Nervana.
                 <br/>
+                <a href="https://arxiv.org/abs/1810.09958">[arXiv]</a>
+                <a href="https://dl.acm.org/citation.cfm?id=3321559">[Proceedings]</a>
+                <a href="https://ucdavis365-my.sharepoint.com/:p:/g/personal/masotoudeh_ucdavis_edu/ETO7HQWP8DFNk2cgutBDYrUB_ii2sEdQnGykF7AEvZbZ6Q?e=LOC5IB">[Slides]</a>
             </p>
         </li>
         <li>
-            <a href="https://arxiv.org/abs/1802.06944" target="_blank">
+            <a href="https://arxiv.org/abs/1802.06944">
                 DeepThin: A Self-Compressing Library for Deep Neural Networks
             </a>
             <p>
-                We develop a compression method that solves the fundamental symmetry issue with rank-1 factorizations,
-                implement it as a library module for the TensorFlow framework, and show that we achieve up to 60%
-                better accuracy than all other methods (pruning, HashedNet, same-size network, simple factorization)
-                while increasing inference speed by up to 14X with a custom, fused matrix multiplication kernel.
-                <br/><br/>
                 Full paper (titled "C3-Flow: Compute Compression Co-Design Flow
                 for Deep Neural Networks") accepted for publication and oral
                 presentation at DAC 2019. Extended abstract presented as a
                 poster at SysML 2018.
-                <br/><br/>
-                Completed during an internship with Intel Labs, co-authored by
-                Sara Baghsorkhi from Intel Labs.
+                <br/>
+                <a href="https://arxiv.org/abs/1802.06944">[arXiv]</a>
+                <a href="https://dl.acm.org/citation.cfm?id=3317786">[Proceedings]</a>
+                <a href="https://ucdavis365-my.sharepoint.com/:p:/g/personal/masotoudeh_ucdavis_edu/ERFlEBaj5xFLq7z1PIOn8lEBV2uth9lLYMMxfgFgMwIoKA?e=68qDSM">[Slides]</a>
             </p>
         </li>
     </ul>
@@ -169,9 +117,9 @@
     <h2>Where to next?</h2>
     <section id="where-to">
         <ul id="next-links">
-            <li><a href="content/resume.pdf" target="_blank">Resume</a></li>
-            <li><a href="research.html" target="_blank">Research &amp; Publications</a></li>
-            <li><a href="https://github.com/matthewsot" target="_blank">Code</a></li>
+            <li><a href="content/resume.pdf">Resume</a></li>
+            <li><a href="research.html">Research &amp; Publications</a></li>
+            <li><a href="https://github.com/matthewsot">Code</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="proofs.html">Proofs</a></li>
             <li><a href="csed.html">CS educational materials</a></li>
