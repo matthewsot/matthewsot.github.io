@@ -37,6 +37,12 @@ ul, p {
         ul li + li {
             margin-top: 15px;
         }
+        ul li > em:first-child {
+            /* Paper titles */
+            font-weight: 700;
+            text-decoration: underline;
+            font-style: normal;
+        }
 
 @media all and (max-width: 535px) {
     body {
