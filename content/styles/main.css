@@ -7,16 +7,7 @@ html, body {
         padding: 25px 0;
     }
 
-u, a {
-    text-decoration: none;
-    border-bottom: 1px dotted currentColor;
-}
-a {
-    color: #44a0c8;
-}
-    a:hover {
-        border-bottom-style: solid;
-    }
+a { color: #44a0c8; }
 
 img {
     width: 125px;
@@ -28,12 +19,8 @@ ul, p {
     max-width: 900px;
     font-size: 1.05em;
 }
-    p {
-        margin: 10px 0;
-    }
-    ul {
-        margin: 25px 0;
-    }
+    p { margin: 10px 0; }
+    ul { margin: 25px 0; }
         ul li + li {
             margin-top: 15px;
         }
@@ -49,9 +36,7 @@ ul, p {
         width: 95%;
         text-align: center;
     }
-    p {
-        text-align: left;
-    }
+    p { text-align: left; }
     ul {
         padding: 0;
         list-style-type: none;
